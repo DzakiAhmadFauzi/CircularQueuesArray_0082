@@ -36,7 +36,7 @@ public:
         if (FRONT == -1)
         {
             FRONT = 0; // 2.a
-            REAR = 0; // 2.b
+            REAR = 0;  // 2.b
         }
         else
         {
@@ -45,11 +45,10 @@ public:
                 REAR = 0;
             else
                 REAR = REAR + 1;
+        }
+        queue_array[REAR] = num;
     }
-    queue_array[REAR] = num;
-}
-
-void remove()
+} void remove()
 {
     // Cek apakah antrian kosong
     if (FRONT == -1)
@@ -73,4 +72,19 @@ void remove()
         else
             FRONT = FRONT + 1;
     }
-};
+}
+
+public:
+void display()
+{
+    int FRONT_position = FRONT;
+    int REAR_position = REAR;
+
+    // Cek apakah antrian kosong
+    if (FRONT == -1)
+    {
+        cout << "Queue is empty\n";
+        return;
+    }
+
+    
